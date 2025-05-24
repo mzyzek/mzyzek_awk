@@ -1,0 +1,20 @@
+package:
+  name: mzyzek-awk
+  version: "1.01"
+
+source:
+  git_rev: HEAD
+  git_url: 'https://github.com/onetrueawk/awk'
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - gcc
+
+  run:
+    - 
+
+test:
+  imports:
+    -
