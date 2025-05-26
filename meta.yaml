@@ -1,20 +1,25 @@
+{% set name = "mzyzek-awk" %}
+{% set version = "1.01" %}
+
 package:
-  name: mzyzek-awk
-  version: "1.01"
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
 
 source:
   git_rev: HEAD
   git_url: 'https://github.com/onetrueawk/awk'
 
+build:
+  script: "${RECIPE_DIR}/make.sh"
+
 requirements:
-  build:
+  host:
+    - pip
     - python
-    - setuptools
-    - gcc
-
   run:
-    - 
+    - python
 
-test:
-  imports:
-    -
+about:
+  home: "https://github.com/onetrueawk/awk"
+  summary: " mzyzek awk test"
+
